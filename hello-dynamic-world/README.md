@@ -1,3 +1,5 @@
+## Description
+Svelte app exploring binding, templating with added little fun.
 
 ## Get started
 
