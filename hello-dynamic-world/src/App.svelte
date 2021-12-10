@@ -31,13 +31,16 @@
 				planetimg='/img/startrek.jpg';
 				facts = 'You are diffcult to locate, try again or register your planet';
 			}else{
-				greetingMessage = `<b>${planet[0].greeting}</b>, your entry is logged`;
+				greetingMessage = `<b>${planet[0].greeting}</b>, ${todaysdate} your entry is logged`;
 				planetimg= planet[0].imgsrc;
 				facts = planet[0].efact;
 			}
 	}
 
 </script>
+<svelte:head>
+  <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+</svelte:head>
 <Header />
 <main>
 <div class="center">
@@ -45,10 +48,10 @@
 	<div>
 		<div class="border-5"> 
 			<p>Enter planet name : <input type="text" bind:value="{message}"></p>
-			<p class="logentry">{ todaysdate} {@html greetingMessage}</p>
+			<p class="logentry">{@html greetingMessage}</p>
 			<p><button on:click="{handleClick}">Log</button></p>
 
-			<div>You will love to know how <b>Earthly</b> sees you: <h4>{facts}</h4></div>
+			<div>You will love to know how <b>Earthly</b> sees you: <h2>{facts}</h2></div>
 		</div>
 	</div>
 </div>		
@@ -60,18 +63,14 @@
 		padding: 1em;
 		max-width: 960px;
 		margin: 40px auto;
+		font-family: 'Electrolize';
+		font-style: normal;
 	}
 	.center {
 		margin: auto;
 		border: 3px solid green;
 		padding: 10px;
 		}
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
 
 	@media (min-width: 640px) {
 		main {
