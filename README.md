@@ -1,5 +1,5 @@
 ## Description
-Svelte app exploring binding, templating with added little fun.
+Sample Svelte app exploring binding, templating with added little fun.
 
 ## Get started
 
