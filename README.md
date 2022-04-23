@@ -6,7 +6,7 @@ Sample Svelte app exploring binding, templating with added little fun.
 Install the dependencies...
 
 ```bash
-cd hello-dynamic-world
+cd svelte_tutorial
 npm install
 ```
 
